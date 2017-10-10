@@ -1,0 +1,21 @@
+@using CarDealership.Models;
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>List of Cars</title>
+  </head>
+  <body>
+    <ul>
+      @foreach(Car car in Model)
+      {
+        <li><p>Make/Model: @car.GetMakeModel()</p><p>Price: @car.GetPrice()</p><p>Miles: @car.GetMiles()</p></li>
+      }
+    </ul>
+    <p><a href="/">Add another Car</a></p>
+    <form action="/car/list/clear" method="post">
+      <button type="submit" name="button">Clear List</button>
+    </form>
+  </body>
+</html>

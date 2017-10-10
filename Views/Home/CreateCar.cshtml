@@ -1,0 +1,10 @@
+@if (@Model != null) {
+  <p>@Model.GetMakeModel()</p>
+  <p>@Model.GetPrice()</p>
+  <p>@Model.GetMiles()</p>
+  <p><a href="/">Add another Car</a></p>
+  <p><a href="/car/list">View list of cars!</a></p>
+} else {
+  <p>Please enter in the correct format</p>
+  <p><a href="/">Go Back</a></p>
+}
